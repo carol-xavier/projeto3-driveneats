@@ -19,84 +19,94 @@
 
         <h6>Primeiro, seu prato</h6>
     <body>
-        <section class="seçao" data-identifier="dishes">
-            <div class="opçao" id="mySelect" onclick="myFunction()" data-identifier="food-option">
+        <section class="seçao pratos" data-identifier="dishes">
+            <div class="opçao prato1" onclick="selecionarComida('.prato1')" data-identifier="food-option">
                 <img src="imagens/camarao.jpg" alt="foto do prato camarão internacional" />
                 <p class="nome" data-identifier="food-title">Camarão Internacional</p>
                 <p class="descriçao">Um pouco de batata, um pouco de salada</p>    
                 <p class="preço" data-identifier="food-price">R$ 14,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon> 
             </div>
 
-            <div class="opçao" id="mySelect" onclick="myFunction()" data-identifier="food-option">
+            <div class="opçao prato2" onclick="selecionarComida('.prato2')" data-identifier="food-option">
                 <img src="imagens/camarao.jpg" alt="foto do prato camarão internacional" />
                 <p class="nome" data-identifier="food-title">Camarão Internacional</p>
                 <p class="descriçao">Um pouco de batata, um pouco de salada</p>    
                 <p class="preço" data-identifier="food-price">R$ 14,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon> 
             </div>
 
-            <div class="opçao" id="mySelect" onclick="myFunction()" data-identifier="food-option">
+            <div class="opçao prato3" onclick="selecionarComida('.prato3')" data-identifier="food-option">
                 <img src="imagens/camarao.jpg" alt="foto do prato camarão internacional" />
                 <p class="nome" data-identifier="food-title">Camarão Internacional</p>
                 <p class="descriçao">Um pouco de batata, um pouco de salada</p>    
                 <p class="preço" data-identifier="food-price">R$ 14,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon> 
             </div>
         </section>
        
         <h6>Agora, sua bebida</h6>
 
-        <section class="seçao" data-identifier="drinks">
-            <div class="opçao">
+        <section class="seçao bebidas" data-identifier="drinks">
+            <div class="opçao bebida1" onclick="selecionarBebida('.bebida1')">
                 <img src="imagens/bebida.jpeg" alt="foto do refrigerante" />
                 <p class="nome" data-identifier="food-title">Refri São Geraldo</p>
                 <p class="descriçao">Garrafa 1L</p>    
                 <p class="preço" data-identifier="food-price">R$ 4,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon> 
             </div>
 
-            <div class="opçao">
+            <div class="opçao bebida2" onclick="selecionarBebida('.bebida2')">
                 <img src="imagens/bebida.jpeg" alt="foto do refrigerante" />
                 <p class="nome" data-identifier="food-title">Refri São Geraldo</p>
                 <p class="descriçao">Garrafa 1L</p>    
                 <p class="preço" data-identifier="food-price">R$ 4,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon> 
             </div>
 
-            <div class="opçao">
+            <div class="opçao bebida3" onclick="selecionarBebida('.bebida3')">
                 <img src="imagens/bebida.jpeg" alt="foto do refrigerante" />
                 <p class="nome" data-identifier="food-title">Refri São Geraldo</p>
                 <p class="descriçao">Garrafa 1L</p>    
                 <p class="preço" data-identifier="food-price">R$ 4,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon> 
             </div>
         </section>
 
         <h6>Por fim, sua sobremesa</h6>
 
-        <section class="seçao" data-identifier="desserts">
-            <div class="opçao">
+        <section class="seçao sobremesas" data-identifier="desserts">
+            <div class="opçao sobremesa1" onclick="selecionarSobremesa('.sobremesa1')">
                 <img src="imagens/sobremesa.jpg" alt="foto do prato camarão internacional" />
                 <p class="nome" data-identifier="food-title">Delícia de morango</p>
                 <p class="descriçao">Creme branco com morango e ganache de chocolate</p>    
                 <p class="preço"data-identifier="food-price">R$ 10,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
 
-            <div class="opçao">
+            <div class="opçao sobremesa2" onclick="selecionarSobremesa('.sobremesa2')">
                 <img src="imagens/sobremesa.jpg" alt="foto do prato camarão internacional" />
                 <p class="nome" data-identifier="food-title">Delícia de morango</p>
                 <p class="descriçao">Creme branco com morango e ganache de chocolate</p>    
                 <p class="preço"data-identifier="food-price">R$ 10,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
 
-            <div class="opçao">
+            <div class="opçao sobremesa3" onclick="selecionarSobremesa('.sobremesa3')">
                 <img src="imagens/sobremesa.jpg" alt="foto do prato camarão internacional" />
                 <p class="nome"data-identifier="food-title">Delícia de morango</p>
                 <p class="descriçao">Creme branco com morango e ganache de chocolate</p>    
                 <p class="preço"data-identifier="food-price">R$ 10,90</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
         </section>
 
         <footer>
-            <div class="botao">
-                <p>Secione os três items para fechar o pedido</p>
-            </div>
+                <button><p>Secione os três items para fechar o pedido</p></button>
         </footer>
-        <script src="script.js"></script>    
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>    
     </body>
 </html>
