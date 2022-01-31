@@ -95,3 +95,15 @@ function cancelarPedido() {
   cancelar.classList.add('escondido');
 }
 
+function finalizarPedido() {
+  if (prato != 0 && bebida != 0 && sobremesa != 0) {
+    const msgpadrao = `
+    Olá, gostaria de fazer o pedido:
+    - Prato: ${prato}
+    - Bebida: ${bebida}
+    - Sobremesa: ${sobremesa}
+    Total: R$ ${(total).toFixed(2)}
+  `
+    window.open(`https://wa.me/5585986817611?text=${encodeURIComponent(msgpadrao)}`);
+  }
+}
