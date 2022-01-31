@@ -1,68 +1,66 @@
 let prato = 0;
-function selecionarComida(classPrato) {
-  const pratos = document.querySelector(".pratos")
-  const cleanup = pratos.querySelector(".selecionado");
+let precoPrato = 0;
+function selecionarComida(classPrato, preco) {
+  prato = document.querySelector(".pratos");
+  precoPrato = preco;
+  const cleanup = prato.querySelector(".selecionado");
   if (cleanup !== null) {
     cleanup.classList.remove("selecionado");
   }
-
-  const elemento = pratos.querySelector(classPrato);
+  const elemento = prato.querySelector(classPrato);
   elemento.classList.add("selecionado");  
 
-  const check = pratos.querySelector(".check");
+  const check = prato.querySelector(".check");
   if (check !== null) {
     check.classList.remove("check");
   }
-
-  const verdinho = pratos.querySelector(classPrato);
+  const verdinho = prato.querySelector(classPrato);
   verdinho.classList.add("check");  
 
-
-prato = ".selecionado";
+  ativarBotao();
 }
 
 let bebida = 0;
-function selecionarBebida(classBebida) {
-  const bebidas = document.querySelector(".bebidas")
-  const cleanup = bebidas.querySelector(".selecionado");
+let precoBebida = 0;
+function selecionarBebida(classBebida, preco) {
+  bebida = document.querySelector(".bebidas");
+  precoBebida = preco;
+  const cleanup = bebida.querySelector(".selecionado");
   if (cleanup !== null) {
     cleanup.classList.remove("selecionado");
   }
-
-  const elemento = bebidas.querySelector(classBebida);
+  const elemento = bebida.querySelector(classBebida);
   elemento.classList.add("selecionado");  
 
-  const check = bebidas.querySelector(".check");
+  const check = bebida.querySelector(".check");
   if (check !== null) {
     check.classList.remove("check");
   }
-
-  const verdinho = bebidas.querySelector(classBebida);
+  const verdinho = bebida.querySelector(classBebida);
   verdinho.classList.add("check");  
 
-  bebida = classBebida;
+  ativarBotao();
 }
 
 let sobremesa = 0;
-function selecionarSobremesa(classSobremesa) {
-  const sobremesas = document.querySelector(".sobremesas")
-  const cleanup = sobremesas.querySelector(".selecionado");
+let precoSobremesa = 0;
+function selecionarSobremesa(classSobremesa, preco) {
+  sobremesa = document.querySelector(".sobremesas");
+  precoSobremesa = preco;
+  const cleanup = sobremesa.querySelector(".selecionado");
   if (cleanup !== null) {
     cleanup.classList.remove("selecionado");
   }
-
-  const elemento = sobremesas.querySelector(classSobremesa);
+  const elemento = sobremesa.querySelector(classSobremesa);
   elemento.classList.add("selecionado");  
-
-  const check = sobremesas.querySelector(".check");
+  const check = sobremesa.querySelector(".check");
   if (check !== null) {
     check.classList.remove("check");
   }
-
-  const verdinho = sobremesas.querySelector(classSobremesa);
+  const verdinho = sobremesa.querySelector(classSobremesa);
   verdinho.classList.add("check");  
 
-  sobremesa = classSobremesa;
+  ativarBotao();
 }
 
 function ativarBotao() {
@@ -73,5 +71,21 @@ function ativarBotao() {
       botao.classList.remove('selecionar');
       botao.innerHTML = 'Fechar pedido (:'
     }
+  }
+}
+
+let total = 0;
+function botaoDeConfirmacao(){
+  if (prato != 0 && bebida != 0 && sobremesa != 0){
+    total = precoPrato + precoBebida + precoSobremesa;
+    const confirmacao = document.querySelector('.confirmacao');
+    confirmacao.classList.remove('escondido');
+    document.querySelector('.opcao-prato').innerHTML = prato;
+    document.querySelector('.preco-prato').innerHTML = precoPrato.toFixed(2).toString().replace('.', ',');
+    document.querySelector('.opcao-bebida').innerHTML = bebida;
+    document.querySelector('.preco-bebida').innerHTML = precoBebida.toFixed(2).toString().replace('.', ',');
+    document.querySelector('.opcao-sobremesa').innerHTML = sobremesa;
+    document.querySelector('.preco-sobremesa').innerHTML = precoSobremesa.toFixed(2).toString().replace('.', ',');
+    document.querySelector('.preco-total').innerHTML = total.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'});
   }
 }
