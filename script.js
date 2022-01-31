@@ -89,3 +89,9 @@ function botaoDeConfirmacao(){
     document.querySelector('.preco-total').innerHTML = total.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'});
   }
 }
+
+function cancelarPedido() {
+  const cancelar= document.querySelector('.confirmacao');
+  cancelar.classList.add('escondido');
+}
+

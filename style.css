@@ -216,16 +216,14 @@ button p {
     max-width: 100%;
     font-weight: 700;
     font-size: 22px;
-    line-height: 26px;
-    border: none;
     border-radius: 100px;
-    padding: 0px;
+    padding: 10%;
 }
 
 .cancelar{
     font-weight: 700;
     font-size: 20px;
-    line-height: 24px;
+    font-family: 'Roboto';
 }
 
 .escondido{
